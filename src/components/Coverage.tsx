@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import CoverageMap from "./CoverageMap";
 
 const Coverage = () => {
   const coverageAreas = [
@@ -20,17 +21,9 @@ const Coverage = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          {/* Map Placeholder */}
-          <div className="relative mb-12 rounded-xl overflow-hidden shadow-card border border-border">
-            <div className="aspect-video bg-gradient-to-br from-primary/5 via-background to-accent/5 flex items-center justify-center">
-              <div className="text-center p-8">
-                <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-                <p className="text-xl font-semibold mb-2">Service Coverage Map</p>
-                <p className="text-muted-foreground">
-                  Serving customers across 14 major locations in Madhya Pradesh
-                </p>
-              </div>
-            </div>
+          {/* Interactive Map */}
+          <div className="mb-12">
+            <CoverageMap />
           </div>
 
           {/* Coverage Area List */}

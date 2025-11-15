@@ -134,24 +134,4 @@ All colors MUST be HSL.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-
-  /* Leaflet custom popup styles */
-  .leaflet-popup-content-wrapper {
-    border-radius: 0.75rem;
-    box-shadow: 0 8px 24px hsla(220, 90%, 56%, 0.12);
-    border: 1px solid hsl(var(--border));
-  }
-
-  .leaflet-popup-content {
-    margin: 0;
-    font-family: inherit;
-  }
-
-  .leaflet-popup-tip {
-    border-top-color: hsl(var(--card)) !important;
-  }
-
-  .leaflet-container {
-    font-family: inherit;
-  }
 }

@@ -39,9 +39,14 @@ const Coverage = () => {
               <Badge
                 key={index}
                 variant="outline"
-                className="justify-center py-3 px-4 text-sm font-medium border-primary/20 hover:bg-primary/10 hover:border-primary transition-smooth"
+                className="justify-center py-3 px-4 text-sm font-medium border-primary/20 hover:bg-primary/10 hover:border-primary transition-all duration-300 cursor-pointer transform hover:scale-105 hover:shadow-md group"
+                style={{
+                  animation: "scale-in 0.4s ease-out forwards",
+                  animationDelay: `${index * 0.05}s`,
+                  opacity: 0
+                }}
               >
-                <MapPin className="w-3 h-3 mr-2" />
+                <MapPin className="w-3 h-3 mr-2 group-hover:animate-bounce-subtle" />
                 {area}
               </Badge>
             ))}

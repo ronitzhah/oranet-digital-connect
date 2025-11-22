@@ -26,36 +26,24 @@ const About = () => {
 
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div 
-              className="text-center p-6 bg-card rounded-lg shadow-card border border-border hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 hover:border-primary/50 cursor-pointer group"
-              style={{ animation: "scale-in 0.5s ease-out forwards", animationDelay: "0.1s", opacity: 0 }}
-            >
-              <Shield className="w-8 h-8 text-primary mx-auto mb-3 group-hover:animate-bounce-subtle" />
-              <div className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">Licensed</div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-card border border-border">
+              <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+              <div className="text-2xl font-bold mb-1">Licensed</div>
               <div className="text-sm text-muted-foreground">ISP Provider</div>
             </div>
-            <div 
-              className="text-center p-6 bg-card rounded-lg shadow-card border border-border hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 hover:border-primary/50 cursor-pointer group"
-              style={{ animation: "scale-in 0.5s ease-out forwards", animationDelay: "0.2s", opacity: 0 }}
-            >
-              <Target className="w-8 h-8 text-primary mx-auto mb-3 group-hover:animate-bounce-subtle" />
-              <div className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">14+</div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-card border border-border">
+              <Target className="w-8 h-8 text-primary mx-auto mb-3" />
+              <div className="text-2xl font-bold mb-1">14+</div>
               <div className="text-sm text-muted-foreground">Service Areas</div>
             </div>
-            <div 
-              className="text-center p-6 bg-card rounded-lg shadow-card border border-border hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 hover:border-primary/50 cursor-pointer group"
-              style={{ animation: "scale-in 0.5s ease-out forwards", animationDelay: "0.3s", opacity: 0 }}
-            >
-              <Users className="w-8 h-8 text-primary mx-auto mb-3 group-hover:animate-bounce-subtle" />
-              <div className="text-2xl font-bold mb-1 group-hover:text-primary transition-colors">Local</div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-card border border-border">
+              <Users className="w-8 h-8 text-primary mx-auto mb-3" />
+              <div className="text-2xl font-bold mb-1">Local</div>
               <div className="text-sm text-muted-foreground">Support Team</div>
             </div>
-            <div 
-              className="text-center p-6 bg-card rounded-lg shadow-card border border-border hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 hover:border-accent/50 cursor-pointer group"
-              style={{ animation: "scale-in 0.5s ease-out forwards", animationDelay: "0.4s", opacity: 0 }}
-            >
-              <Award className="w-8 h-8 text-accent mx-auto mb-3 group-hover:animate-bounce-subtle" />
-              <div className="text-2xl font-bold mb-1 group-hover:text-accent transition-colors">Fast</div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-card border border-border">
+              <Award className="w-8 h-8 text-accent mx-auto mb-3" />
+              <div className="text-2xl font-bold mb-1">Fast</div>
               <div className="text-sm text-muted-foreground">Resolution</div>
             </div>
           </div>

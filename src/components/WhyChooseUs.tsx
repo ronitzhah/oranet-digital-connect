@@ -43,42 +43,26 @@ const WhyChooseUs = () => {
         {/* Main Reasons */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {reasons.map((reason, index) => (
-            <div 
-              key={index} 
-              className="text-center group cursor-pointer"
-              style={{
-                animation: "fade-in-up 0.6s ease-out forwards",
-                animationDelay: `${index * 0.2}s`,
-                opacity: 0
-              }}
-            >
-              <div className="w-16 h-16 rounded-full bg-gradient-primary mx-auto mb-4 flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 group-hover:shadow-hover">
-                <reason.icon className="w-8 h-8 text-primary-foreground group-hover:animate-bounce-subtle" />
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 rounded-full bg-gradient-primary mx-auto mb-4 flex items-center justify-center">
+                <reason.icon className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">{reason.title}</h3>
+              <h3 className="text-xl font-semibold mb-3">{reason.title}</h3>
               <p className="text-muted-foreground">{reason.description}</p>
             </div>
           ))}
         </div>
 
         {/* Benefits Grid */}
-        <div className="max-w-4xl mx-auto bg-card rounded-xl shadow-card p-8 border border-border hover:shadow-hover transition-all duration-500">
+        <div className="max-w-4xl mx-auto bg-card rounded-xl shadow-card p-8 border border-border">
           <h3 className="text-2xl font-bold mb-6 text-center">Additional Benefits</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="flex items-center gap-3 hover:translate-x-2 transition-all duration-300 group cursor-pointer"
-                style={{
-                  animation: "slide-in-left 0.5s ease-out forwards",
-                  animationDelay: `${index * 0.1}s`,
-                  opacity: 0
-                }}
-              >
-                <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
+              <div key={index} className="flex items-center gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Check className="w-4 h-4 text-primary" />
                 </div>
-                <span className="text-foreground group-hover:text-primary transition-colors">{benefit}</span>
+                <span className="text-foreground">{benefit}</span>
               </div>
             ))}
           </div>

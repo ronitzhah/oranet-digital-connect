@@ -43,12 +43,20 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="shadow-card hover:shadow-hover transition-smooth border-border">
+            <Card 
+              key={index} 
+              className="shadow-card hover:shadow-hover transition-all duration-500 border-border transform hover:-translate-y-2 hover:border-primary/50 group cursor-pointer"
+              style={{ 
+                animation: "fade-in-up 0.6s ease-out forwards",
+                animationDelay: `${index * 0.15}s`,
+                opacity: 0
+              }}
+            >
               <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
                 <CardDescription className="text-sm">
                   {service.description}
                 </CardDescription>
@@ -56,8 +64,8 @@ const Services = () => {
               <CardContent>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    <li key={idx} className="flex items-center gap-2 text-sm group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
